@@ -3,7 +3,7 @@ import { envs } from '../config/envs';
 
 
 const db = new Sequelize(envs.database , envs.user, envs.password, {
-    host: 'localhost',
+    host: envs.host,
     dialect: 'mysql',
 });
 
