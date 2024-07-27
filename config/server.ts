@@ -45,7 +45,8 @@ class Server {
         this.app.use( cors({
             origin: '*',
             methods: 'GET,POST,PUT,DELETE,OPTIONS',
-            allowedHeaders: 'Content-Type,Authorization'
+            allowedHeaders: 'none',
+            
         }) );
 
         this.app.use( express.json() );
