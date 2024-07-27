@@ -43,7 +43,7 @@ class Server {
 
         // CORS
         this.app.use( cors({
-            origin: ['https://fractal-front.onrender.com']
+            origin: '*'
         }) );
 
         this.app.use( express.json() );
