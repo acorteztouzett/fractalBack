@@ -42,12 +42,7 @@ class Server {
     middlewares() {
 
         // CORS
-        this.app.use( cors({
-            origin: '*',
-            methods: 'GET,POST,PUT,DELETE,OPTIONS',
-            allowedHeaders: 'none',
-            
-        }) );
+        this.app.use( cors() );
 
         this.app.use( express.json() );
 
