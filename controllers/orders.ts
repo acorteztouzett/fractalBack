@@ -44,7 +44,6 @@ export const createOrder= async (req: Request, res: Response) => {
         final_price,
         status
     });
-    res.setHeader('Access-Control-Allow-Origin', '*');
     res.json( order );
 }
 
