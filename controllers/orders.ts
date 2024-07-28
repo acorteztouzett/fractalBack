@@ -36,14 +36,16 @@ export const deleteOrder= async (req: Request, res: Response) => {
 export const createOrder= async (req: Request, res: Response) => {
     const {id, products_number, final_price, status,products }= req.body;
 
-    await OrderDetail.bulkCreate(products);
-
+    
     const order= await Order.create({
         id,
         products_number,
         final_price,
         status
     });
+
+    await OrderDetail.bulkCreate(products);
+
     res.json( order );
 }
 
