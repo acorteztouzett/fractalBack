@@ -46,7 +46,7 @@ export const createOrder= async (req: Request, res: Response) => {
     
     // await OrderDetail.bulkCreate(products);
     // res.json( order );
-    console.log(req.body);
+    console.log(req.body.id);
 }
 
 
