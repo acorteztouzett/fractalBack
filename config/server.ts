@@ -42,11 +42,7 @@ class Server {
     middlewares() {
 
         // CORS
-        this.app.use( cors({
-            origin: ['https://fractal-front.onrender.com'],
-            methods: ['GET','POST','PUT','DELETE','OPTIONS'],
-            allowedHeaders: ['Content-Type']
-        }) );
+        this.app.use( cors() );
 
         this.app.use( express.json() );
 
