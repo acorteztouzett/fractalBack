@@ -9,7 +9,7 @@ router.delete('/:id', deleteProductDetail);
 router.put('/:id', editProductDetail);
 
 router.put('/change/:id', editProduct);
-router.delete('delete/:id', deleteProduct);
+router.delete('/delete/:id', deleteProduct);
 
 
 export default router;
