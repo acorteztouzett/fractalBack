@@ -123,3 +123,19 @@ export const editProduct= async (req: Request, res: Response) => {
         throw new Error(error);
     }
 }
+
+export const addProduct= async (req: Request, res: Response) => {
+    try {
+        const { id, name, unitPrice }= req.body;
+        const product= await Product.create({
+            id,
+            name,
+            unitPrice
+        });
+
+        res.json(product);
+    }
+    catch (error:any) {
+        throw new Error(error);
+    }
+}
