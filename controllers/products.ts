@@ -64,7 +64,7 @@ export const editProductDetail= async (req: Request, res: Response) => {
 
 export const deleteProduct= async (req: Request, res: Response) => {
     try {
-        const { id }= req.body;
+        const { id }= req.params;
         const product= await Product.findOne({
             where: {
                 id: id
