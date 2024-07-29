@@ -94,7 +94,8 @@ export const deleteProduct= async (req: Request, res: Response) => {
 
 export const editProduct= async (req: Request, res: Response) => {
     try {
-        const { id , name, unitPrice}= req.body;
+        const { id }= req.params;
+        const { name, unitPrice}= req.body;
         const product = await Product.findOne({
             where: {
                 id: id
